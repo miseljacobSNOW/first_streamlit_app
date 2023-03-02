@@ -30,7 +30,7 @@ if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     streamlit.dataframe(my_data_rows)
 
-if streamlist.button('Add a fruit to the list'):
+if streamlit.button('Add a fruit to the list'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     result = insert_row_snowflake(add_my_fruit)
     streamlit.text(result)
